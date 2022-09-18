@@ -59,9 +59,9 @@ public class PracticeFormTest {
         $(byText("Delhi")).click();
         $("#submit").click();
 
+        //проверка
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
 
-        //проверка
         $(".table-responsive").shouldHave(text(firstName), text(lastName),
                 text(email), text("Male"), text(phoneNumber), text("30 October,1994"),
                 text("Maths"), text("Sports, Reading, Music"), text("picture1.jpg"), text(currentAddress), text("NCR Delhi"));
