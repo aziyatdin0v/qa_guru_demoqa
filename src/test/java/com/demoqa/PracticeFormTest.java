@@ -65,6 +65,11 @@ public class PracticeFormTest {
         $(".table-responsive").shouldHave(text(firstName), text(lastName),
                 text(email), text("Male"), text(phoneNumber), text("30 October,1994"),
                 text("Maths"), text("Sports, Reading, Music"), text("picture1.jpg"), text(currentAddress), text("NCR Delhi"));
+
+        /* как лучше сделать проверку на соответствие паре ключ-значение в таблице?
+        $$(".table-responsive").findBy(text("Student Name")).shouldHave(text(firstName+ " " +lastName));
+        $(".table-responsive").$(byText("Student Name")).parent().lastChild().shouldHave(text(firstName+ " " +lastName));
+         */
     }
 
 }
