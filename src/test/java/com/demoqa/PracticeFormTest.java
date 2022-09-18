@@ -4,8 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -17,7 +15,7 @@ public class PracticeFormTest {
     String email = "ziyatdinov@azat.com";
     String phoneNumber = "9991122333";
     String currentAddress = "Moscow";
-;
+
     @BeforeAll
     static void setUp() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -67,7 +65,6 @@ public class PracticeFormTest {
         $(".table-responsive").shouldHave(text(firstName), text(lastName),
                 text(email), text("Male"), text(phoneNumber), text("30 October,1994"),
                 text("Maths"), text("Sports, Reading, Music"), text("picture1.jpg"), text(currentAddress), text("NCR Delhi"));
-
     }
 
 }
