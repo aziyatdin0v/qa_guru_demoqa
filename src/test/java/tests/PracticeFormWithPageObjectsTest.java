@@ -52,7 +52,7 @@ public class PracticeFormWithPageObjectsTest {
     }
 
     @Test
-    void fillFormWithMinimumDataTest() {
+    void fillPracticeFormWithMinimumDataTest() {
         registrationFormPage.openPage()
                 .setFirstName("Azat")
                 .setLastName("Ziyatdinov")

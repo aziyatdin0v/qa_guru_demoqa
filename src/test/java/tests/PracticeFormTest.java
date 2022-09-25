@@ -81,7 +81,7 @@ public class PracticeFormTest {
 
     }
 
-    private void checkTableRow(String title, String expectedValue){
+    private void checkTableRow(String title, String expectedValue) {
         $(".table-responsive").$(byText(title)).parent().shouldHave(text(expectedValue));
     }
 }
