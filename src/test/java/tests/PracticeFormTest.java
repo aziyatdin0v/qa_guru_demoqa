@@ -1,4 +1,4 @@
-package com.demoqa;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -64,10 +64,6 @@ public class PracticeFormTest {
         $(".modal-dialog").should(appear);
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
 
-//        $(".table-responsive").shouldHave(text(firstName), text(lastName),
-//                text(email), text("Male"), text(phoneNumber), text("30 October,1994"),
-//                text("Maths"), text("Sports, Reading, Music"), text("picture1.jpg"), text(currentAddress), text("NCR Delhi"));
-
         checkTableRow("Student Name", firstName + ' ' + lastName);
         checkTableRow("Student Email", email);
         checkTableRow("Gender", "Male");
@@ -78,6 +74,10 @@ public class PracticeFormTest {
         checkTableRow("Picture", "picture1.jpg");
         checkTableRow("Address", currentAddress);
         checkTableRow("State and City", "NCR Delhi");
+
+//      $(".table-responsive").shouldHave(text(firstName), text(lastName),
+//                text(email), text("Male"), text(phoneNumber), text("30 October,1994"),
+//                text("Maths"), text("Sports, Reading, Music"), text("picture1.jpg"), text(currentAddress), text("NCR Delhi"));
 
     }
 
