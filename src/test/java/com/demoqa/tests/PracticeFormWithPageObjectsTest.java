@@ -1,14 +1,9 @@
-package tests;
+package com.demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationFormPage;
-
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import com.demoqa.pages.RegistrationFormPage;
 
 public class PracticeFormWithPageObjectsTest {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
@@ -30,9 +25,9 @@ public class PracticeFormWithPageObjectsTest {
                 .setPhoneNumber("9991122333")
                 .setBirthDate("30", "October", "1994")
                 .setSubjects("Maths")
-                .setHobbie("Sports")
-                .setHobbie("Reading")
-                .setHobbie("Music")
+                .setHobbies("Sports")
+                .setHobbies("Reading")
+                .setHobbies("Music")
                 .setUploadPicture("picture1.jpg")
                 .setCurrentAddress("Moscow")
                 .setStateAndCity("NCR", "Delhi")

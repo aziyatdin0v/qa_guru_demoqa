@@ -1,9 +1,9 @@
-package pages;
+package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.CalendarComponent;
-import pages.components.ResultsModal;
-import pages.components.StateAndCityComponent;
+import com.demoqa.pages.components.StateAndCityComponent;
+import com.demoqa.pages.components.CalendarComponent;
+import com.demoqa.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -21,7 +21,7 @@ public class RegistrationFormPage {
             genderSelect = $("#genterWrapper"),
             phoneNumberInput = $("#userNumber"),
             subjectsInput = $("#subjectsInput"),
-            hobbieInput = $("#hobbiesWrapper"),
+            hobbiesInput = $("#hobbiesWrapper"),
             pictureUpload = $("#uploadPicture"),
             currentAddress = $("#currentAddress"),
             submitButton = $("#submit");
@@ -78,8 +78,8 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setHobbie(String value) {
-        hobbieInput.$(byText(value)).click();
+    public RegistrationFormPage setHobbies(String value) {
+        hobbiesInput.$(byText(value)).click();
 
         return this;
     }
