@@ -1,4 +1,4 @@
-package utils;
+package com.demoqa.utils;
 
 import java.time.Month;
 import java.util.Random;

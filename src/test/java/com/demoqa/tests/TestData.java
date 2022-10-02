@@ -1,7 +1,7 @@
 package com.demoqa.tests;
 
 import com.github.javafaker.Faker;
-import utils.RandomMonth;
+import com.demoqa.utils.RandomMonth;
 import java.util.Locale;
 
 public class TestData {

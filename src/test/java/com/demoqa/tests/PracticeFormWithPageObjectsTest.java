@@ -60,5 +60,4 @@ public class PracticeFormWithPageObjectsTest {
                 .checkResult("Gender", "Male")
                 .checkResult("Mobile", "9991122333");
     }
-
 }
