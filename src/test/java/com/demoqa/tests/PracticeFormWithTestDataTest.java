@@ -2,6 +2,7 @@ package com.demoqa.tests;
 
 import org.junit.jupiter.api.Test;
 import com.demoqa.pages.RegistrationFormPage;
+
 import static io.qameta.allure.Allure.step;
 
 public class PracticeFormWithTestDataTest extends TestBase {
@@ -10,8 +11,10 @@ public class PracticeFormWithTestDataTest extends TestBase {
     @Test
     void fillPracticeFormTest() {
         step("Open registrations form", () -> {
-            registrationFormPage.openPage()
-                    .setFirstName(TestData.firstName)
+            registrationFormPage.openPage();
+        });
+        step("Fill form", () -> {
+            registrationFormPage.setFirstName(TestData.firstName)
                     .setLastName(TestData.lastName)
                     .setEmail(TestData.email)
                     .setGender(TestData.gender)
@@ -24,8 +27,7 @@ public class PracticeFormWithTestDataTest extends TestBase {
                     .setStateAndCity(TestData.state, TestData.city)
                     .setSubmit();
         });
-
-        step("Fill form", () -> {
+        step("Check form results", () -> {
             registrationFormPage.checkResultsTableVisible()
                     .checkResult("Student Name", TestData.firstName + " " + TestData.lastName)
                     .checkResult("Student Email", TestData.email)
@@ -42,14 +44,17 @@ public class PracticeFormWithTestDataTest extends TestBase {
 
     @Test
     void fillPracticeFormWithMinimumDataTest() {
-        step("Check form results", () -> {
-            registrationFormPage.openPage()
-                    .setFirstName(TestData.firstName)
+        step("Open registrations form with minimum data", () -> {
+            registrationFormPage.openPage();
+        });
+        step("Fill form with minimum data", () -> {
+            registrationFormPage.setFirstName(TestData.firstName)
                     .setLastName(TestData.lastName)
                     .setGender(TestData.gender)
                     .setPhoneNumber(TestData.phoneNumber)
                     .setSubmit();
-
+        });
+        step("Check form results with minimum data", () -> {
             registrationFormPage.checkResultsTableVisible()
                     .checkResult("Student Name", TestData.firstName + " " + TestData.lastName)
                     .checkResult("Gender", TestData.gender)
